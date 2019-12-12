@@ -4,7 +4,6 @@
 Using Python 3 f-string to make a times table string.
 '''
 
-import itertools
 import pytablewriter
 import pyperclip
 
