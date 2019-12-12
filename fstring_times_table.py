@@ -20,24 +20,6 @@ def times_table(int_start=1, int_end=9):
         for x in range(int_start, int_end)
     ]
 
-    # # get max str length
-    # chain = itertools.chain.from_iterable(list_tbl)
-
-    # list_temp = list(chain)
-
-    # list_temp = [len(i) for i in list_temp]
-
-    # int_len = max(list_temp)
-
-    # # set every string to max length, left justified
-    # for i, j in enumerate(list_tbl):
-
-    #     for k, v in enumerate(j):
-
-    #         j[k] = v.ljust(int_len)
-
-    #     list_tbl[i] = j
-
     return zip(*list_tbl)
 
 
