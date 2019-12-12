@@ -1,15 +1,44 @@
 # -*- coding: utf-8 -*-
 
 '''
-Using Python 3 f-string to make a times table string.
+Using Python 3 f-string to make a times table string. A bit of fun.
+
+This module uses the "pytablewriter" to convert the time table into a
+markdown table string.
+
+It also uses "pyperclip" to copy the markdown table string into the clipboard.
+
+Author : 高斯羽 博士 (Dr. Gāo, Sī Yǔ)
 '''
 
 import pytablewriter
 import pyperclip
 
+__author__ = u'高斯羽 博士 (Dr. Gāo, Sī Yǔ)'
+__version__ = '1.0.0'
+__date__ = '2019-12-12'
+
 
 def times_table(int_start=1, int_end=9):
     '''
+    Using Python 3.6+ f-string to make a times table.
+
+    Parameters
+    -----------
+    int_start : int
+        The start of the times table.
+
+        Default = 1.
+
+    int_end : int
+        The end of the times table.
+
+        Default = 9.
+
+    Returns
+    --------
+    zip : zip object
+        The times table as a zip object.
     '''
 
     int_end = int_end + 1
@@ -34,7 +63,8 @@ if __name__ == '__main__':
 
     list_header = list(range(int_start, int_end + 1))
 
-    writer = pytablewriter.RstGridTableWriter()
+    # use pytablewriter to make a markdown table
+    writer = pytablewriter.MarkdownTableWriter()
 
     writer.headers = list_header
 
